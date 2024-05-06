@@ -26,6 +26,9 @@ func (bd *BitData) GetBit(index int) (byte, error) {
 	}
 	return byte((bd.value >> index) & 1), nil
 }
+func (bd *BitData) SetValue(value uint64) {
+	bd.value = value
+}
 
 func (bd *BitData) GetValue() uint64 {
 	return bd.value
